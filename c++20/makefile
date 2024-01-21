@@ -1,8 +1,7 @@
 all := main
 
 main:
-	g++ -std=c++20 -fmodules-ts -xc++-system-header iostream
-	g++ -std=c++20 -fmodules-ts -c Math.cc 
-	g++ -std=c++20 -fmodules-ts -c main.cpp
-	g++ main.o Math.o
+	clang++ -std=c++20 -xc++-system-header --precompile iostream -o iostream.pcm
+	clang++ -std=c++20 -fmodule-file=iostream.pcm -xc++-module Math.cpp --precompile -o Math.pcm 
+	clang++ -std=c++20 main.cpp -fprebuilt-module-path=./ Math.pcm -o main.out
 
