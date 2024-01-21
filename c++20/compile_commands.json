@@ -4,15 +4,16 @@
       "/usr/bin/clang++",
       "-c",
       "-std=c++20",
+      "-x",
+      "c++-module",
       "-fmodule-file=iostream.pcm",
-      "-xc++-module",
       "--precompile",
       "-o",
       "Math.pcm",
-      "Math.cpp"
+      "Math.c++"
     ],
     "directory": "/home/davit/github/languages_training/c++20",
-    "file": "/home/davit/github/languages_training/c++20/Math.cpp",
+    "file": "/home/davit/github/languages_training/c++20/Math.c++",
     "output": "/home/davit/github/languages_training/c++20/Math.pcm"
   },
   {
@@ -20,14 +21,15 @@
       "/usr/bin/clang++",
       "-c",
       "-std=c++20",
+      "-fmodule-file=iostream.pcm",
       "-fprebuilt-module-path=./",
       "Math.pcm",
       "-o",
       "main.out",
-      "main.cpp"
+      "main.c++"
     ],
     "directory": "/home/davit/github/languages_training/c++20",
-    "file": "/home/davit/github/languages_training/c++20/main.cpp",
+    "file": "/home/davit/github/languages_training/c++20/main.c++",
     "output": "/home/davit/github/languages_training/c++20/main.out"
   },
   {
@@ -90,6 +92,7 @@
       "-fgnuc-version=4.2.1",
       "-fno-implicit-modules",
       "-fprebuilt-module-path=./",
+      "-fmodule-file=iostream.pcm",
       "-fcxx-exceptions",
       "-fexceptions",
       "-fcolor-diagnostics",
@@ -98,11 +101,11 @@
       "-x",
       "c++",
       "-o",
-      "/tmp/main-496668.o",
-      "main.cpp"
+      "/tmp/main-13ac61.o",
+      "main.c++"
     ],
     "directory": "/home/davit/github/languages_training/c++20",
-    "file": "/home/davit/github/languages_training/c++20/main.cpp",
-    "output": "/tmp/main-496668.o"
+    "file": "/home/davit/github/languages_training/c++20/main.c++",
+    "output": "/tmp/main-13ac61.o"
   }
 ]
