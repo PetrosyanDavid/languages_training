@@ -12,9 +12,9 @@
       "Math.pcm",
       "Math.c++"
     ],
-    "directory": "/home/davit/github/languages_training/c++20",
-    "file": "/home/davit/github/languages_training/c++20/Math.c++",
-    "output": "/home/davit/github/languages_training/c++20/Math.pcm"
+    "directory": "/home/davit_p/my_git/languages_training/c++20",
+    "file": "/home/davit_p/my_git/languages_training/c++20/Math.c++",
+    "output": "/home/davit_p/my_git/languages_training/c++20/Math.pcm"
   },
   {
     "arguments": [
@@ -28,18 +28,20 @@
       "main.out",
       "main.c++"
     ],
-    "directory": "/home/davit/github/languages_training/c++20",
-    "file": "/home/davit/github/languages_training/c++20/main.c++",
-    "output": "/home/davit/github/languages_training/c++20/main.out"
+    "directory": "/home/davit_p/my_git/languages_training/c++20",
+    "file": "/home/davit_p/my_git/languages_training/c++20/main.c++",
+    "output": "/home/davit_p/my_git/languages_training/c++20/main.out"
   },
   {
     "arguments": [
-      "/usr/lib/llvm-16/bin/clang",
+      "/usr/bin/clang-18",
       "-cc1",
       "-triple",
-      "x86_64-pc-linux-gnu",
+      "x86_64-unknown-linux-gnu",
       "-emit-obj",
       "-mrelax-all",
+      "-dumpdir",
+      "main.out-",
       "-disable-free",
       "-clear-ast-before-backend",
       "-disable-llvm-verifier",
@@ -60,24 +62,23 @@
       "x86-64",
       "-tune-cpu",
       "generic",
-      "-mllvm",
-      "-treat-scalable-fixed-error-as-warning",
       "-debugger-tuning=gdb",
-      "-fcoverage-compilation-dir=/home/davit/github/languages_training/c++20",
+      "-fdebug-compilation-dir=/home/davit_p/my_git/languages_training/c++20",
+      "-fcoverage-compilation-dir=/home/davit_p/my_git/languages_training/c++20",
       "-resource-dir",
-      "/usr/lib/llvm-16/lib/clang/16",
+      "/usr/lib/clang/18",
       "-internal-isystem",
-      "/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13",
+      "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12",
       "-internal-isystem",
-      "/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13",
+      "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/x86_64-linux-gnu/c++/12",
       "-internal-isystem",
-      "/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward",
+      "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/backward",
       "-internal-isystem",
-      "/usr/lib/llvm-16/lib/clang/16/include",
+      "/usr/lib/clang/18/include",
       "-internal-isystem",
       "/usr/local/include",
       "-internal-isystem",
-      "/usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include",
+      "/usr/bin/../lib/gcc/x86_64-linux-gnu/12/../../../../x86_64-linux-gnu/include",
       "-internal-externc-isystem",
       "/usr/include/x86_64-linux-gnu",
       "-internal-externc-isystem",
@@ -86,13 +87,12 @@
       "/usr/include",
       "-std=c++20",
       "-fdeprecated-macro",
-      "-fdebug-compilation-dir=/home/davit/github/languages_training/c++20",
       "-ferror-limit",
       "19",
       "-fgnuc-version=4.2.1",
       "-fno-implicit-modules",
-      "-fprebuilt-module-path=./",
       "-fmodule-file=iostream.pcm",
+      "-fprebuilt-module-path=./",
       "-fcxx-exceptions",
       "-fexceptions",
       "-fcolor-diagnostics",
@@ -101,11 +101,11 @@
       "-x",
       "c++",
       "-o",
-      "/tmp/main-13ac61.o",
+      "/tmp/main-bfda04.o",
       "main.c++"
     ],
-    "directory": "/home/davit/github/languages_training/c++20",
-    "file": "/home/davit/github/languages_training/c++20/main.c++",
-    "output": "/tmp/main-13ac61.o"
+    "directory": "/home/davit_p/my_git/languages_training/c++20",
+    "file": "/home/davit_p/my_git/languages_training/c++20/main.c++",
+    "output": "/tmp/main-bfda04.o"
   }
 ]

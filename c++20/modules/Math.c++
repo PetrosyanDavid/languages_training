@@ -1,7 +1,5 @@
 // Math.cppm
 
-// #include <iostream>
-
 export module Math;
 
 import <iostream>;
