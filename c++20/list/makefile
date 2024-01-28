@@ -1,4 +1,4 @@
-all:  bin/thread
+all:  bin/list
 
 CC        := g++
 SOURCES   := $(wildcard src/*cpp)
@@ -25,7 +25,7 @@ obj/%.dep : src/%.cpp ./inc
 obj/%.o :
 	$(CC) $(CFLAGS) -I$(INC) $< -o $@ 
 
-bin/thread : $(OBJECTS) ./bin #$(INCLUDE_H) $(INCLUDE_T)
+bin/list : $(OBJECTS) ./bin #$(INCLUDE_H) $(INCLUDE_T)
 	$(CC) -pthread $(OBJECTS) -o $@
 
 ./inc :
