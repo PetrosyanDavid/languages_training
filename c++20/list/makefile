@@ -9,7 +9,7 @@ INCLUDE_T := $(patsubst src/%.tpp, inc/%.tpp, $(INCLUDET))
 OBJECTS   := $(patsubst src/%.cpp, obj/%.o, $(SOURCES))
 INC       := ./inc
 DEPENDS   := $(patsubst src/%.cpp,obj/%.dep,$(SOURCES))
-CFLAGS    := -c -g -Wall -Wextra -pedantic -std=c++20
+CFLAGS    := -c -g -Wall -Wextra -pedantic -std=c++20 -fconcepts
 
 
 ifeq ($(MAKECMDGOALS),)
