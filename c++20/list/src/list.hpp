@@ -91,9 +91,11 @@ template <typename T>
 List<T>::List(const List<T>& l)
 {
     std::cout << "Default copy constructor" << std::endl;
-    if (l.m_head != nullptr) {
-        this->m_head = new Node<T>(l.m_head->val);
+    if (l.m_head == nullptr) {
+        this->m_head = nullptr;
+        return;
     }
+    this->m_head = new Node<T>(l.m_head->val);
     Node<T>* tmp = this->m_head;
     Node<T>* tmp_l = l.m_head;
     while (tmp_l->next != nullptr) {
@@ -109,9 +111,11 @@ List<T>::List(const List<U>& l)
     requires(std::convertible_to<U, T> || std::same_as<U, T>)
 {
     std::cout << "Non default copy constructor" << std::endl;
-    if (l.m_head != nullptr) {
-        this->m_head = new Node<T>(static_cast<T>(l.m_head->val));
+    if (l.m_head == nullptr) {
+        this->m_head = nullptr;
+        return;
     }
+    this->m_head = new Node<T>(static_cast<T>(l.m_head->val));
     Node<T>* tmp = this->m_head;
     Node<U>* tmp_l = l.m_head;
     while (tmp_l->next != nullptr) {
@@ -156,8 +160,7 @@ List<T>::List(List<T>&& l) noexcept
 {
     std::cout << "Move constructor" << std::endl;
     this->m_head = l.m_head;
-    l->m_head->next = nullptr;
-    l->m_head = nullptr;
+    l.m_head = nullptr;
 }
 
 template <typename T>
@@ -171,7 +174,6 @@ List<T>& List<T>::operator=(List<T>&& l) noexcept
         tmp = _tmp;
     }
     this->m_head = l.m_head;
-    l.m_head->next = nullptr;
     l.m_head = nullptr;
     return *this;
 }
